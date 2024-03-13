@@ -24,9 +24,9 @@
 
   <div class="content mb-4">
     <div class="section1 border-b grid grid-cols-2">
-      <div id="hello" class="ml-8">
-        <h1 class="font-bold text-lg"> I am Regina Bosibori</h1>
-        <p>I am a Web Developer located in Nairobi,Kenya. I currently work as a part time intern Web Developer for Fameve, located in Kenya. I am looking to take on more work and to increase my skills as a Web Developer.</p>
+      <div id="hello" class="ml-8 mt-6 ">
+        <h1 class="font-bold text-4xl"> I am Regina Bosibori</h1>
+        <p class="py-4">I am a Web Developer located in Nairobi,Kenya. I currently work as a part time intern Web Developer for Fameve, located in Kenya. I am looking to take on more work and to increase my skills as a Web Developer.</p>
         <ul class=" mt-4 space-y-4">
           <li class="ml-1">PHONE: <span class="ml-6">+254706298098</span></li>
           <li class="ml-1">EMAIL:<span class="ml-10">regina.angwenyi@gmail.com</span></li>
@@ -52,55 +52,51 @@
             </ul>
           </li>
         </ul>
+        <div class="flex space-x-4 mt-6">
+          <button onclick="openmodal()" class="openmodalBtn bg-blue-500 text-sm rounded-md py-6 px-8">CONTACT ME</button>
+          <button class="bg-blue-500 text-sm rounded-md py-6 px-8">DOWNLOAD CV</button>
+      </div>
 
-        <div class="flex space-x-4 mt-2">
-          <button class="bg-blue-500 text-sm rounded-md py-1 px-2">CONTACT ME</button>
-          <button class="bg-blue-500 text-sm rounded-md py-1 px-2">DOWNLOAD CV</button>
-        </div>
-        <section class="modal z-2 hidden">
-          <div class="overlay absolute hidden">
-            <button class="btn btn-open bg-blue-500 text-white font-bold py-2 px-2 text-xs rounded-lg contact ml-2 mt-4 space-y-4 "> CONTACT ME</button>
-            <button class="CV bg-blue-500 text-xs rounded-lg py-2 px-2 text-white font-bold  ml-2 mt-4 space-y-4">DOWNLOAD CV</button>
-          </div>
-            <h1 class="col-start-1 col-end-2 font-bold">Let's work together</h1>
-            <p class="col-start-1 col-end-2">Are you working on something great? I would love to help make it happen! Drop me a message and start your project right now!</p>
-            <form class="mt-2 grid grid-cols-2 gap-y-1">
-              <div>
-                <label>name</label>
-                <input class="px-2 py-1 rounded-md bg-blue-500" type="name" placeholder="name">
-              </div>
-              <div>
-                <label>Email</label>
-                <input class="px-2 py-1 mt-2 rounded-md bg-blue-500" type="email" placeholder="example@gmail.com">
-              </div>
-              <div class="col-start-2 row-start-1 row-end-3">
-                <textarea class="px-2 py-1 rounded-md bg-blue-500 w-full h-full">Your Message</textarea>
 
-              </div>
-              <div class="flex justify-between mb-6 mt-10">
-                <button class="col-span-full rounded-md bg-green-500 text-white font-bold py-1 px-1">Send a message</button>
-                <button class="rounded-md bg-blue-500 py-1 px-1 text-white">Back to CV</button>
-              </div>
-            </form>
-
-            </div>
-          
-        </section>
-        
       </div>
       <br>
-  
-       
-        
-      
       <div class="col-start-2 row-start-1 mb-8">
         <img src="https://previews.aspirity.com/danny/media/hello-section/image.jpg">
       </div>
-  
+
     
   </div>
+      <div class="modal hidden z-50" id="modal">
+        <div class="modalcontent">
+          <span class="close" onclick="removeModal()">&times;</span>
+          <h1 class="col-start-1 col-end-2 font-bold">Let's work together</h1>
+          <p class="col-start-1 col-end-2">Are you working on something great? I would love to help make it happen! Drop me a message and start your project right now!</p>
+          <form class="mt-2 grid grid-cols-2 gap-y-1">
+            <div>
+              <label>name</label>
+              <input class="px-2 py-1 rounded-md bg-blue-500" type="name" placeholder="name">
+            </div>
+            <div>
+              <label>Email</label>
+              <input class="px-2 py-1 mt-2 rounded-md bg-blue-500" type="email" placeholder="example@gmail.com">
+            </div>
+            <div class="col-start-2 row-start-1 row-end-3">
+              <textarea class="px-2 py-1 rounded-md bg-blue-500 w-full h-full">Your Message</textarea>
+            </div>
+            <div class="flex justify-between mb-6 mt-10">
+              <button class="btn-open rounded-md bg-green-500 text-white font-bold py-1 px-1">Send a message</button>
+              <button class="rounded-md bg-blue-500 py-1 px-1 text-white">Back to CV</button>
+            </div>
+          
+
+          
+        </div>
+      </div>
+          
+        
+      </section>
   
-  <div id="skills" class="SKILLS section2 py-20 mt-4 ml-4 grid grid-cols-3 border-b">
+  <div id="skills" class="section2 py-20 mt-4 ml-4 grid grid-cols-3 border-b">
     <div class="column1 col-start-1">
       <h1 class=" text-4xl text-bold mt-1" >Skills</h1>
       <p>I am inspired by creating great work with people who are as passionate as I am about building something awesome.</p>
