@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js"></script>
 </head> 
 <body>
   
@@ -51,8 +52,41 @@
             </ul>
           </li>
         </ul>
-        <button class="bg-blue-500 text-white font-bold py-2 px-2 text-xs rounded-lg contact ml-2 mt-4 space-y-4 "> CONTACT ME</button>
-        <button class="CV bg-blue-500 text-xs rounded-lg py-2 px-2 text-white font-bold  ml-2 mt-4 space-y-4">DOWNLOAD CV</button>
+
+        <div class="flex space-x-4 mt-2">
+          <button class="bg-blue-500 text-sm rounded-md py-1 px-2">CONTACT ME</button>
+          <button class="bg-blue-500 text-sm rounded-md py-1 px-2">DOWNLOAD CV</button>
+        </div>
+        <section class="modal z-2 hidden">
+          <div class="overlay absolute hidden">
+            <button class="btn btn-open bg-blue-500 text-white font-bold py-2 px-2 text-xs rounded-lg contact ml-2 mt-4 space-y-4 "> CONTACT ME</button>
+            <button class="CV bg-blue-500 text-xs rounded-lg py-2 px-2 text-white font-bold  ml-2 mt-4 space-y-4">DOWNLOAD CV</button>
+          </div>
+            <h1 class="col-start-1 col-end-2 font-bold">Let's work together</h1>
+            <p class="col-start-1 col-end-2">Are you working on something great? I would love to help make it happen! Drop me a message and start your project right now!</p>
+            <form class="mt-2 grid grid-cols-2 gap-y-1">
+              <div>
+                <label>name</label>
+                <input class="px-2 py-1 rounded-md bg-blue-500" type="name" placeholder="name">
+              </div>
+              <div>
+                <label>Email</label>
+                <input class="px-2 py-1 mt-2 rounded-md bg-blue-500" type="email" placeholder="example@gmail.com">
+              </div>
+              <div class="col-start-2 row-start-1 row-end-3">
+                <textarea class="px-2 py-1 rounded-md bg-blue-500 w-full h-full">Your Message</textarea>
+
+              </div>
+              <div class="flex justify-between mb-6 mt-10">
+                <button class="col-span-full rounded-md bg-green-500 text-white font-bold py-1 px-1">Send a message</button>
+                <button class="rounded-md bg-blue-500 py-1 px-1 text-white">Back to CV</button>
+              </div>
+            </form>
+
+            </div>
+          
+        </section>
+        
       </div>
       <br>
   
