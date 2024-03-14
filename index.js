@@ -1,10 +1,11 @@
 const contactModal= document.getElementById("modalcontactme");
-const overlay=document.getElementById("overlay");
 let openmodalBtn= document.getElementById('modal');
 
 function openmodal(){
     console.log('clicked!!!!');
     document.getElementById('modal').classList.remove("hidden");
+    document.getElementById('body').classList.add("bg-gray-200");
+
         // overlay.classList.remove("hidden");
 
     // openmodalBtn.addEventListener("click", openModal)
@@ -13,7 +14,13 @@ function openmodal(){
 function removeModal(){
     console.log('clicked!!!!');
     document.getElementById('modal').classList.add("hidden");
+    document.getElementById('body').classList.remove("bg-gray-200");
         // overlay.classList.remove("hidden");
 
     // openmodalBtn.addEventListener("click", openModal)
+}
+
+function darkMode(){
+    var element=document.body;
+    element.classList.toggle("dark-mode");
 }
