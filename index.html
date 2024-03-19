@@ -6,12 +6,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="index.js"></script>
   <link rel="stylesheet" href="styles.css">
+  <title>Regina Tailwind resume</title>
 </head> 
 <body id="body">
   
-    <div class="absolute top-0 bg-white shadow-b header menu flex px-16 mb-6 sticky shadow shadow-b">
+    <div class="absolute top-0 bg-white shadow-b justify-between header menu flex px-16 mb-0 sticky shadow shadow-b">
         <div class="flex flex-col justify-center my-auto"><h1 class="flex-1 text-lg font-bold">Regina.</h1></div>
-        <div class="justify-between ml-auto py-6 space-x-4">
+        <div class="hidden lg:flex lg:justify-between lg:ml-auto lg:py-10 lg:space-x-4">
           <a href="#" class="hover:underline hover:text-blue-500">Hello</a>
           <a href="#skills" class="hover:underline hover:text-blue-500" >Skills</a>
           <a href="#experience" class="hover:underline hover:text-blue-500">Experience</a>
@@ -19,9 +20,18 @@
           <a href="#portfolio" class="hover:underline hover:text-blue-500">portfolio</a>
           <a href="#" class="hover:underline hover:text-blue-500">Contact me</a>
         </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="flex lg:hidden w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        
+    </div>
+    <div class="h-32 bg-white flex border shadow mx-2 flex-col lg:hidden">
+      <p class="border-y w-full">kjsdjh</p>
+      <p class="border-b w-full">sdjfsjdflk</p>
     </div>
 
-  <button onclick="darkMode()" class="bg-black text-white rounded-md ml-2 py-2 px-2">Toggle dark mode
+  <button onclick="darkMode()" class="bg-black text-sm text-white rounded-md ml-1 p-1">Toggle dark mode
 
 
   </button>
@@ -30,7 +40,7 @@
 
   <div class="content mb-4">
     <div class="section1 border-b grid grid-cols-1 lg:grid grid-cols-2">
-      <div id="hello" class="ml-8 mt-6 ">
+      <div id="hello" class="mx-8 mt-6 order-2 col-span-full ">
         <h1 class="font-bold text-4xl"> I am Regina Bosibori</h1>
         <p class="py-4">I am a Web Developer located in Nairobi,Kenya. I currently work as a part time intern Web Developer for Fameve, located in Kenya. I am looking to take on more work and to increase my skills as a Web Developer.</p>
         <ul class=" mt-4 space-y-4">
@@ -60,19 +70,19 @@
         </ul>
         <div class="flex space-x-2 mt-6">
           <button onclick="openmodal()" class="openmodalBtn bg-blue-500 text-sm rounded-md py-6 px-8">CONTACT ME</button>
-          <button class="bg-blue-500 text-sm rounded-md py-6 px-8">DOWNLOAD CV</button>
+          <a href="https://docs.google.com/document/d/1Zcsj6P0fHX7eZIRKvd8xSTy7FmxHpaRy/edit?usp=sharing&ouid=103096843172434123127&rtpof=true&sd=true" target="_blank" class="bg-blue-500 text-sm rounded-md py-6 px-8">DOWNLOAD CV</a>
       </div>
 
 
       </div>
       <br>
-      <div class="col-start-1 lg:col-start-2 lg:row-start-1 lg:mb-8">
-        <img src="https://previews.aspirity.com/danny/media/hello-section/image.jpg">
-      </div>
+    <div class="col-span-full mt-1 lg:col-start-2 lg:row-start-1 lg:mb-8 order-1">
+      <img src="https://previews.aspirity.com/danny/media/hello-section/image.jpg">
+    </div>
 
     
   </div>
-      <div class="modal mx-32 border p-24 hidden z-2 bg-white" id="modal">
+      <div class="modal mx-1 lg:mx-32 border lg:p-24 hidden z-2 bg-white" id="modal">
         <div class="modalcontent">
           <span class="close ml-2 py-2 px-2" onclick="removeModal()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -80,21 +90,21 @@
           </span>
           <h1 class="col-start-1 col-end-2 font-bold">Let's work together</h1>
           <p class="col-start-1 col-end-2">Are you working on something great? I would love to help make it happen! Drop me a message and start your project right now!</p>
-          <form class="mt-2 grid grid-cols-2 gap-y-1">
-            <div>
+          <form class="mt-2 grid grid-cols-1 lg:grid grid-cols-2 lg:gap-y-1">
+            <div class="order-1 block col-span-full">
               <label>name</label>
-              <input class="px-2 py-1 rounded-md bg-blue-500" type="name" placeholder="name">
+              <input class="row-start-1 px-2 py-1 rounded-md bg-blue-300" type="name" placeholder="name">
             </div>
-            <div>
+            <div class="order-2 block col-span-full">
               <label>Email</label>
-              <input class="px-2 py-1 mt-2 rounded-md bg-blue-500" type="email" placeholder="example@gmail.com">
+              <input class="row-start-2 px-2 py-1 mt-2 w-1/2 rounded-md bg-blue-300" type="email" placeholder="example@gmail.com">
             </div>
-            <div class="col-start-2 row-start-1 row-end-3">
-              <textarea class="px-2 py-1 rounded-md bg-blue-500 w-full h-full">Your Message</textarea>
+            <div class="order-3 block col-span-full row-start-3 mt-2 lg:col-start-1 lg:row-start-1 lg:row-end-3 ml:2">
+              <textarea class="px-2 py-1 rounded-md border bg-blue-300 w-1/2 lg:w-full lg:h-full" placeholder="your message"></textarea>
             </div>
-            <div class="flex justify-between mb-6 mt-10">
+            <div class=" order-4 flex justify-between space-x-2 mt:10 lg:mt-10">
               <button class="btn-open rounded-md bg-green-500 text-white font-bold py-1 px-1">Send a message</button>
-              <button class="rounded-md bg-blue-500 py-1 px-1 text-white">Back to CV</button>
+              <button class="rounded-md bg-blue-500 p-2 text-white">Back to CV</button>
             </div>
           </form>
           
@@ -103,20 +113,20 @@
       </div>
         
   
-  <div id="skills" class="section2 grid grid-cols-1 ml-1 mb-4 mt-2 lg:py-20 lg:mt-4 lg:ml-4 lg:grid grid-cols-3 border-b">
-    <div class="row-start-1 col-span-full lg:col-start-1 w-full mb-2 ">
+  <div id="skills" class="section2 grid grid-cols-1 ml-1 mb-4 mt-2 lg:py-16 lg:mt-4 lg:ml-4 lg:grid grid-cols-2 border-b">
+    <div class="row-start-1 col-span-full lg:col-start-1 lg:row-start-1 mb-2 ">
       <h1 class=" text-lg font-bold lg:text-4xl text-bold mt-1" >Skills</h1>
-      <p>I am inspired by creating great work with people who are as passionate as I am about building something awesome.</p>
+      <p class="lg:col-start-1 lg:w-1/2">I am inspired by creating great work with people who are as passionate as I am about building something awesome.</p>
     </div>
-    <div class="col-span-full row-start-2 mb-2 border-b lg:col-start-2 lg:ml-12 lg:mb-4">
+    <div class="col-span-full row-start-2 mb-1 border-b lg:border-none lg:col-start-2 lg:row-start-1 :ml-12 lg:mb-1">
       <h1 class="font-bold">Web development</h1>
       <p>Javascript,Python,Django, HTML, tailwindcss </p>
     </div>
-    <div class="row-start-3 mb-2 col-span-full border-b">
+    <div class="row-start-3 mb-1 col-span-full border-b lg:border-none lg:col-start-2 lg:row-start-2">
         <h1 class="font-bold">Front End Development</h1>
         <p>Javascript,tailwindcss CSS</p>
     </div>
-    <div class="row-start-4 col-span-full mb-1 lg:col-start-3 lg:row-start-1">
+    <div class="row-start-4 col-span-full mb-1 lg:border-none lg:col-start-2 lg:row-start-3 ">
       <h1 class="font-bold">Data analysis</h1>
       <p>SPSS, STATA, R, Python</p>
     </div>
@@ -160,44 +170,44 @@
     </div>
   </div>
   
-  <div id="education" class="section3 Education my-4 ml-4 py-10 grid grid-cols-3 border-b">
-    <div class="col-start-1">
-      <h1 class="text-bold text-4xl">Education</h1>
+  <div id="education" class="section3 Education grid grid-cols-1 lg:my-4 lg:ml-4 lg:py-10 lg:grid grid-cols-3 border-b">
+    <div class="col-span-full row-start-1 mb-2 lg:col-start-1">
+      <h1 class="font-bold text-lg lg:text-4xl">Education</h1>
       <p>All my life I have been driven by my strong belief that education is important. I try to learn something new every single day.</p>
     </div>
   
-    <div class="col-start-2 row-start-1 ml-12">
-      <h1 class="font-bold">Bachelor of Economics and statistics</h1>
-      <span>University of Nairobi</span>
-      <span>2016-2020</span>
-      <p class="font-italic">Economics statistical analysis,research methods</p>  
+    <div class="col-span-full row-start-2 mb-2 border-b lg:col-start-2 lg:row-start-1 lg:ml-12">
+      <h1 class="font-bold text-lg">Bachelor of Economics and statistics</h1>
+      <span class="text-slate-700">University of Nairobi</span>
+      <span class="text-slate-700">2016-2020</span>
+      <p class="font-italic">Economics, statistical analysis,research methods</p>  
     </div>
   
-    <div class="col-start-2 row-start-2 mb-4 ml-12">
-      <h1 class="font-bold">Certificate in data analysis and Business Intelligence</h1>
-      <span>Dalworth Research and statistical training center</span>
-      <span>Jan 2021-March 2021</span>
-      <p><span class="font-bold">Modules:</span> Data analysis with SPSS, STATA,R studio</p>
+    <div class="col-span-full row-start-3 mb-2 border-b lg:col-start-2 lg:row-start-2 lg:mb-4 lg:ml-12">
+      <h1 class="font-bold text-lg">Certificate in data analysis and Business Intelligence</h1>
+      <span class="text-slate-700">Dalworth Research and statistical training center</span>
+      <span class="text-slate-700">Jan 2021-March 2021</span>
+      <p><span class="font-bold text-md mb-1">Modules:</span> Data analysis with SPSS, STATA,R studio</p>
       <p> <span class="font-bold">Modules:</span>Data analysis with python pandas, visualization(matplotlib, Seaborn)
       </p>
     </div>
   
-    <div class="col-start-2 mb-4 row-start-3 ml-12">
-        <h1 class="font-bold">Certificate in monitoring and evaluation</h1>
-        <span>Dalworth Research and statistical training center</span>
-        <span>May2023-Present</span>
+    <div class="col-span-full row-start-4 mb-2 lg:col-start-2 lg:mb-4 lg:row-start-3 lg:ml-12">
+        <h1 class="font-bold text-lg">Certificate in monitoring and evaluation</h1>
+        <span class="text-slate-700">Dalworth Research and statistical training center</span>
+        <span class="text-slate-700">May2023-Present</span>
         <p> <span class="font-bold">Modules:</span>Technical proposal writing, designing study designs and work plans, data collection tools and methods, Logical framework, MS project.</p>
 
     </div>
   </div>
   
-  <div id="portfolio" class="section4 portfolio ml-4 mt-4 grid grid-cols-4 border-b">
+  <div id="portfolio" class="section4 text-nowrap mt-4 grid grid-cols-1 col-span-full  portfolio lg:ml-4 lg:mt-4 lg:grid grid-cols-4 border-b">
     <div>
-      <h1 class="text-bold text-4xl">Portfolio</h1>
+      <h1 class="block text-bold text-md lg:text-4xl">Portfolio</h1>
   
     </div>
-    <div class="menu col-span-4 px-8 justify-between space-x-4">
-      <a href="#" class="hover:underline hover:text-blue-500">all projects</a>
+    <div class="menu flex text-xs space-x-2 lg:col-span-4 lg:px-8 justify-between lg:space-x-4">
+      <a href="#" class="text-nowrap hover:underline hover:text-blue-500">all projects</a>
       <a href="#" class="hover:underline hover:text-blue-500">Web development</a>
       <a href="#" class="hover:underline hover:text-blue-500">data analysis</a>
       
